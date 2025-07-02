@@ -78,7 +78,7 @@ export const ScreenShare = ({
   //screen share closed
   useTrackEvent(screenVideoTrack, "track-ended", () => {
     console.log("screen sharing ended");
-    onCloseScreenShare && onCloseScreenShare();
+    onCloseScreenShare?.();
   });
 
   return (

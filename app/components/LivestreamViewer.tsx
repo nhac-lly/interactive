@@ -1,17 +1,12 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import AgoraRTC, {
   AgoraRTCProvider,
-  useRTCClient,
   useJoin,
   useRemoteUsers,
   RemoteUser,
-  useRemoteVideoTracks,
   useRemoteAudioTracks,
-  RemoteVideoTrack,
-  useLocalScreenTrack,
   IAgoraRTCClient,
-  useRTCScreenShareClient,
 } from "agora-rtc-react";
 import { appConfig } from "../config";
 
@@ -40,7 +35,7 @@ function LivestreamViewerInner({ client }: { client: IAgoraRTCClient }) {
         <div className="bg-gray-800 rounded-lg p-6 max-w-2xl mx-auto">
           <h3 className="text-xl font-semibold mb-2">Welcome to the Stream!</h3>
           <p className="text-gray-300">
-            You're watching Channel A. Invite others to join and watch together!
+            Channel A. Invite others to join and watch together!
           </p>
         </div>
       </div>
